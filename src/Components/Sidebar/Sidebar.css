@@ -1,0 +1,71 @@
+.p-profile-img {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid rgb(243, 243, 243);
+}
+.ic span {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+.p-top {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  padding: 0.8rem;
+}
+.p-down {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.p-down h4 {
+  color: black;
+}
+.p-down span {
+  font-size: 1.2rem;
+}
+.p-down:hover {
+  background-color: rgb(247, 247, 247);
+}
+.p-down:hover.p-down span {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.p-down:hover.p-down h4 {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.active h4 {
+  color: var(--color-primary);
+}
+.active span {
+  color: var(--color-primary);
+}
+
+.sidebar-main {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  min-width: 250px;
+  height: 100%;
+  background-color: #ebebeb;
+  transition: left 0.3s ease-in-out; /* Add a transition for smooth sliding */
+  z-index: 99999;
+}
+
+.sidebar-main.open {
+  left: 0; /* Slide in when open */
+}
+.sidebar-cont {
+  position: relative;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  z-index: 9999999;
+  cursor: pointer;
+  background-color: red;
+  padding: 0.2rem;
+  color: white;
+}

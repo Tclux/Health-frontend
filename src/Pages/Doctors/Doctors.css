@@ -1,0 +1,317 @@
+.doctor-profile-wrapper {
+  background-color: white;
+}
+.strip-wrapper {
+  /* border: 2px solid rgb(8, 4, 96); */
+}
+.doc {
+  border: 1px solid rgb(240, 240, 240);
+  padding: 1rem;
+}
+
+.doctor-strip {
+  min-height: 30vh;
+  background-color: rgb(251, 253, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.doctor-strip h2 {
+  font-size: 2.2rem;
+}
+.doctor-strip p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.doctor-thumb-img {
+  width:180px;
+  height: 180px;
+}
+.feature-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.6rem;
+  /* border: 2px solid red; */
+  overflow: hidden;
+}
+.act {
+  border: 1px solid grey;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+}
+.act span {
+  font-size: 1.1rem;
+  margin-right: 0 !important;
+}
+.act:hover {
+  background-color: rgb(232, 19, 19);
+  border: none;
+  cursor: pointer;
+}
+.act:hover.act span {
+  color: white;
+}
+.book-appointment {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.7rem 2rem;
+  color: white;
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+}
+.ic span {
+  font-size: 1rem;
+}
+
+.tabs-main {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  /* border: 2px solid red; */
+  overflow-x: scroll;
+}
+
+.tabs {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid rgb(222, 222, 222);
+  justify-content: space-between;
+}
+
+.tabs button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: black; /* Set the default color of tab text */
+  padding: 1.3rem 3rem;
+}
+
+.tabs button.active {
+  color: var(--color-primary); /* Change to your active style */
+}
+
+.tabs button:hover {
+  color: var(--color-primary); /* Change to your hover color */
+}
+
+.line {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  height: 3px; /* Height of the line */
+  background-color: var(--color-primary); /* Default color of the line */
+  transition: left 0.3s ease, width 0.3s ease, background-color 0.3s ease; /* Add transition for background-color */
+}
+.line2 {
+  position: absolute;
+  bottom: 0;
+  height: 3px; /* Height of the line */
+  background-color: var(--color-primary); /* Default color of the line */
+  transition: left 0.3s ease, width 0.3s ease, background-color 0.3s ease; /* Add transition for background-color */
+}
+.content {
+  margin-top: 20px;
+  /* color: rgb(218, 217, 217); */
+}
+.overview {
+  padding: 0.6rem;
+}
+.overview h3 {
+  font-size: 1.2rem;
+}
+.overview h2 {
+  font-size: 1.2rem;
+}
+/* EducationComponent.css */
+.education {
+  margin-top: 20px;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+}
+
+.bullet {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 2rem;
+  background-color: var(--color-primary);
+}
+
+.x h5 {
+  color: rgb(155, 155, 155);
+}
+
+/* ServicesComponent.css */
+.services-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.serve {
+  width: calc(
+    33.33% - 10px
+  ); /* 33.33% to ensure 3 items per row, minus margin */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  margin-right: 10px;
+}
+.serve p {
+  margin-bottom: 0 !important;
+}
+.serve span {
+  color: var(--color-primary);
+}
+.y p {
+  margin-bottom: 0 !important;
+}
+.doc-price {
+  font-size: 20px;
+}
+.patient-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.like span {
+  font-size: 1rem;
+  color: green;
+}
+.like p {
+  font-size: 0.8rem;
+  color: green;
+  font-weight: 500;
+}
+.star {
+  display: inline-block;
+  /* border: 2px solid red; */
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.feed button {
+  background-color: rgb(52, 200, 173);
+  border: none;
+  padding: 0.3rem 0.7rem;
+  color: white;
+  border-radius: 0.4rem;
+}
+.feed {
+  display: flex;
+  justify-content: center;
+}
+.feed button:hover {
+  background-color: rgb(41, 175, 150);
+}
+/* ReviewComponent.css */
+.review {
+  margin-top: 20px;
+}
+
+.review-input textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.character-counter {
+  font-size: 12px;
+}
+
+.review-rating label {
+  margin-right: 10px;
+}
+.review-rating {
+  /* border: 2px solid red; */
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: end;
+}
+.add-review {
+  background-color: rgb(52, 200, 173);
+  margin-top: 1rem;
+  border: none;
+  padding: 0.9rem 2.3rem;
+  color: white;
+  border-radius: 0.4rem;
+}
+.add-review:hover {
+  background-color: rgb(41, 175, 150);
+}
+/* ReviewComponent.css */
+.review-rating select {
+  /* width: 100%; */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.review-rating select:focus {
+  outline: none;
+  border-color: #007bff; /* Change to your preferred focus color */
+}
+.schedule{
+    max-width: 500px;
+    background-color: rgb(244, 244, 244);
+    margin: 0 auto;
+    padding: 1rem;
+}
+.schedule h4{
+    color: gray;
+}
+.today{
+    border-bottom: 1px solid grey;
+}
+.open-now{
+    background-color: rgb(184, 220, 208);
+    color: green;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.9rem;
+    margin-bottom: 0.5rem !important;
+    font-weight: bold;
+  padding: 0.1rem 0.5rem;
+       font-size: 11px;
+}
+.closed{
+    background-color: rgb(243, 197, 197);
+    color: red;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.9rem;
+    margin-bottom: 0.5rem !important;
+    font-weight: bold;
+    padding: 0.1rem 0.5rem;
+    font-size: 11px;
+}
+.t{
+    font-weight: 600;
+}
+
+.z{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}

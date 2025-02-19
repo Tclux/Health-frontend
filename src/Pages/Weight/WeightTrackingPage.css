@@ -1,0 +1,65 @@
+/* WeightTrackingPage.css */
+
+.weight-tracking-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.weight-history {
+  margin-top: 20px;
+}
+
+.weight-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.weight-history li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+}

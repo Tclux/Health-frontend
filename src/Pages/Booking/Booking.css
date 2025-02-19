@@ -1,0 +1,81 @@
+.booking-page {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calendar-container {
+  margin-bottom: 20px;
+}
+
+.time-slots {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color:  var(--color-primary-hover);
+}
+
+.react-calendar {
+  width: 800px; /* Increase the size of the calendar */
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0;  */
+  color: black; /* Set the text color to black */
+}
+
+/* Set the text color for all elements inside the calendar */
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  color: inherit;
+}
+
+
+.react-calendar__month-view__days__day {
+  padding: 10px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+    /* margin-left: 10px !important;
+  margin-right: 10px !important; */
+ color: black;
+ 
+}
+
+.custom-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+
+.booked-date {
+  /* border: 2px solid #66cc99 !important; */
+  border-radius: 0.5rem;
+  background-color: rgba(102, 204, 153, 0.5) !important;
+   /* border: 2px solid red; */
+}
+
+@media (max-width: 600px) {
+  .booking-page {
+    padding: 0 10px;
+  }
+}

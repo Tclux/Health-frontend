@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;0,800;1,600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-primary: #3091a9;
+  --color-primary-hover: #5fa3b0;
+  --doc-height: 100%;
+  --doc-width: 100%;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgb(232, 238, 237);
+  --color-background: #f6f6f9;
+  --color-background-header: rgba(35, 47, 62);
+  --border-bottom: 0.5px solid rgb(61, 60, 60);
+  --color-dim: rgb(102, 102, 104);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+.active-slide {
+  transform: translate(0);
+  transition: 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.next-slide {
+  transform: translate(100%);
+
+  transition: 0.4s ease-in-out;
+}
+
+.last-slide {
+  transform: translate(-100%);
+
+  transition: 0.4s ease-in-out;
+}
+
+.special {
+  color: rgb(240, 235, 235);
+  /* font-size: 2rem; */
+}
+
+.dark-theme {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+  --color-light: rgba(0, 0, 0, 0.4);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  width: var(--doc-width);
+  height: var(--doc-height);
+  font-size: 0.85rem;
+  background: white;
+
+  transition: 0.5s ease;
+  /* overflow-x: hidden; */
+}
+button {
+  color: black !important;
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}
+h2 {
+  font-size: 1.4rem;
+  /* color: #333; */
+}
+h3 {
+  font-size: 0.9rem;
+  /* color: #333; */
+}
+h4 {
+  font-size: 0.8rem;
+  /* color: #333; */
+}
+h5 {
+  font-size: 0.77rem;
+  /* color: #333; */
+}
+p {
+  font-size: 0.77rem;
+  font-weight: 300;
+}
+
+.back-to-top {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.back-to-top:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top.hide {
+  opacity: 0;
+  transform: translateY(-200px);
+  pointer-events: none;
+}
+.top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top.hide {
+  opacity: 0;
+  transform: translateY(-200px);
+  pointer-events: none;
+}
+.top {
+  padding: 5px;
+  background-color: white;
+  z-index: 999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+
+.accordion-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.accordion-container h4 {
+  /* color: var(--color-primary); */
+  font-weight: 600;
+  font-size: 1rem;
+}
+.accordion-container h1 {
+  font-size: 0.5rem;
+  /* font-weight: 700; */
+}
+.accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  border: 1px solid rgb(230, 230, 230);
+  background-color: rgb(247, 249, 251);
+}
+
+.accordion-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title {
+  /* font-size: 16px; */
+  /* font-weight: bold; */
+  /* color: #333; */
+}
+
+.accordion-arrow {
+  /* width: 12px; */
+  /* height: 12px; */
+  background-color: rgb(250, 249, 250);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  visibility: hidden;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 1000px; /* Adjust as needed */
+  visibility: visible;
+  transition: max-height 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  padding: 15px;
+}
+
+.accordion-item.open .accordion-header {
+  background-color: rgb(247, 249, 251);
+  /* color: white !important; */
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 1.3rem;
+}
+
+.accordion-item.open .accordion-arrow {
+  background-color: var(--color-primary);
+  color: white !important;
+}
+.accordion-item.open {
+  background-color: white;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-card {
+  width: 400px;
+  padding: 1.8rem;
+  border-top: 5px solid rgb(25, 154, 177);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgb(245, 245, 245);
+  /* padding-left: 4rem; */
+  /* padding-right: 4rem; */
+}
+.login-input input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  background-color: rgb(246, 253, 252);
+  border: 1px solid rgb(214, 212, 212);
+}
+.login-input input:focus {
+  outline: none !important;
+  border: 2px solid rgb(25, 154, 177);
+  box-shadow: 0 0 6px rgb(25, 154, 177);
+}
+.login-btn {
+  background-color: var(--color-primary);
+  padding: 7px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.6s ease;
+  width: 100%;
+  transition: 0.2s ease;
+}
+.login-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.doctor-dashboard {
+  display: flex;
+  position: relative;
+  /* border: 2px solid green; */
+}
+
+.sidebar {
+  min-width: 250px; /* Adjust as needed */
+  min-height: 110vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 67px; /* Height of the header */
+  /* padding: 20px; */
+  border: 1px solid rgb(233, 233, 233);
+  margin-bottom: 1rem;
+}
+
+.main {
+  width: calc(100% - 250px); /* Subtract 250px from 100% */
+  padding: 0;
+}
+.dashboard {
+  display: flex;
+  position: relative;
+  /* border: 2px solid green; */
+}
+
+.open-button {
+  cursor: pointer;
+  color: rgb(22, 36, 82);
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .open-button {
+    display: block; /* Display the toggle button */
+  }
+}

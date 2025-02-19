@@ -1,0 +1,82 @@
+/* ExerciseTracker.css */
+
+.exercise-tracker-container {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  width: 100% !important;
+  padding: 20px;
+}
+
+.routine-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  /* border: 2px solid red; */
+  width: 100%;
+}
+.main{
+    /* border: 2px solid green; */
+    width: 100%;
+}
+.routine-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* border: 2px solid red; */
+  width: 100% !important;
+}
+
+.routine-item:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.routine-item.selected {
+  background-color: #e0f7fa;
+}
+
+.selected-routine {
+  margin-top: 20px;
+}
+
+.custom-routine {
+  margin-top: 20px;
+}
+
+.custom-routine input[type="text"],
+.custom-routine button {
+  margin-top: 10px;
+}
+
+.selected-routine h3 {
+  margin-bottom: 10px;
+}
+
+.selected-routine input[type="text"],
+.selected-routine input[type="date"],
+.selected-routine button {
+  margin-top: 10px;
+}
+.exercise-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.exercise-card p {
+  margin: 8px 0;
+}
+
+.exercise-card p:first-child {
+  margin-top: 0;
+}
+
+.exercise-card p:last-child {
+  margin-bottom: 0;
+}
